@@ -1,5 +1,5 @@
 name: Dziedziczenie
-description: Nothing to inherit tab
+description: Zakładka opcji dziedziczenia. Komunikat o brakujących elementach. Stan empty.
 type: empty.inheritance
 
 form:

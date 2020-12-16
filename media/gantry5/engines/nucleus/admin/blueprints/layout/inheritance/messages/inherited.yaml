@@ -1,5 +1,5 @@
 name: Dziedziczenie
-description: Inherited tab
+description: Zakładka opcji dziedziczenia z listą szablonów dziedziczących elementy. Stan Dziedziczenia
 type: inherited.inheritance
 
 form:
@@ -7,4 +7,4 @@ form:
     _note:
       type: separator.note
       class: 'alert alert-success blocksize-note'
-      content: 'Układ szablonu %s został odziedziczony przez szablon/y: %s'
+      content: 'Układ szablonu (Layout) %s został odziedziczony przez szablon/y Outline: %s'

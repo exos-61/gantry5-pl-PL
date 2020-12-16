@@ -1,14 +1,14 @@
 name: Dziedziczenie
-description: Nothing to inherit tab
+description: Zakładka opcji dziedziczenia. Brak dziedziczonych sekcji i modułów (Stan domyślny).
 type: empty.inheritance
 
 form:
   fields:
-  
+
     _note:
       type: separator.note
       class: 'alert alert-info blocksize-note'
-      content: 'Możesz dziedziczyć sekcje i moduły z Szablonu bazowego.'
+      content: 'Możesz dziedziczyć sekcje i moduły z Szablonu bazowego (Base Outline), który ma skonfigurowany układ szablonu (Layout), Moduły-G5 (Particles), Wtyczki-G5 (Atoms), Pozycje-G5 (Module Position) i Instancje-G5 (Module Instance).'
     _note2:
       type: separator.note
       class: 'alert alert-success blocksize-note'
