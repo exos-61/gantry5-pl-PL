@@ -1,2 +1,2 @@
-# language-pl-PL-gantry5
+# gantry5-pl-PL
 Gantry 5 of Poland
