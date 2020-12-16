@@ -1,0 +1,118 @@
+name: !Custom CSS / JS
+description: Skonfiguruj własny CSS i Javascript.
+type: atom
+icon: fa-file-code-o
+
+form:
+  fields:
+  
+    _note_edu:
+      type: separator.note
+      class: alert alert-success
+      content: <p style="margin:0;"><small><button type="button" class="btn btn-secondary">Dodatek-G5 Custom CSS / JS</button> jest zintegrowany z <a href="http://docs.gantry.org/gantry5/configure/page-settings#custom-css-js" target="_blank"> Gantry 5 <i class="fa fa-external-link"></i></a>.<br />Dodatek-G5 umożliwia łatwe dodawanie własnych skryptów CSS i JavaScript do szablonu.</small></p>
+      
+    enabled:
+      type: input.checkbox
+      label: Włączony
+      description: Globally enable CSS/JS particles.
+      default: true
+
+    css:
+      type: collection.list
+      array: true
+      label: CSS
+      description: Dodaj, usuń lub zmodyfikuj niestandardowe zasoby CSS.
+      value: name
+      ajax: true
+
+      fields:
+
+        .name:
+          type: input.text
+          label: Nazwa
+          skip: true
+
+        .location:
+          type: input.filepicker
+          label: Lokalizacja pliku
+          icon: fa-file-code-o
+          placeholder: 'http://cdn1.remote/file.css'
+          filter: '\.(css|less|scss|sass)$'
+          root: 'gantry-assets://'
+
+        .inline:
+          type: textarea.textarea
+          label: Inline CSS
+          description: Dodaje wbudowany CSS do szybkich fragmentów kodu (quick snippets).
+
+        _info:
+          type: separator.note
+          class: alert alert-info
+          content: 'Dodaj tylko wbudowany kod CSS, the &lt;style&gt;&lt;/style&gt; tagi zostaną automatycznie dodane.'
+
+        .extra:
+          type: collection.keyvalue
+          label: Atrybuty Tagów
+          key_placeholder: 'Key (data-*, style, ...)'
+          value_placeholder: Wartość
+          exclude: ['rel', 'href', 'type']
+
+        .priority:
+          type: input.number
+          label: Priorytet ładowania
+          description: 'Ustawia priorytet ładowania zasobu na stronie. Wartość może wynosić od 10 (pierwsza) do -10 (ostatnia). Wartość domyślna to 0.'
+          default: 0
+          min: -10
+          max: 10
+
+    javascript:
+      type: collection.list
+      array: true
+      label: Javascript
+      description: Dodaj, usuń lub zmodyfikuj niestandardowe zasoby JavaScript.
+      value: name
+      ajax: true
+
+      fields:
+
+        .name:
+          type: input.text
+          label: Nazwa
+          skip: true
+
+        .location:
+          type: input.filepicker
+          label: Lokalizacja pliku
+          icon: fa-file-code-o
+          placeholder: 'http://cdn1.remote/file.js'
+          filter: '\.(jsx?|coffee)$'
+          root: 'gantry-assets://'
+
+        .inline:
+          type: textarea.textarea
+          label: Dodaj (wbuduj) JavaScript
+          description: Dodaj (wbuduj) JavaScript dla szybkich fragmentów codu(quick snippets).
+
+        _info:
+          type: separator.note
+          class: alert alert-info
+          content: 'Dodaj tylko wbudowany kod JavaScript, the &lt;script&gt;&lt;/script&gt; tagi zostaną automatycznie dodane.'
+
+        .in_footer:
+          type: input.checkbox
+          label: 'Przed </body>'
+          description: Czy chcesz, aby skrypt ładował się przed końcem znacznika < /body>, czy wewnątrz < head >< /head >.
+          default: false
+
+        .extra:
+          type: collection.keyvalue
+          label: Atrybuty Tagów
+          exclude: ['src', 'type']
+
+        .priority:
+          type: input.number
+          label: Priorytet ładowania
+          description: 'Ustawia priorytet ładowania zasobu na stronie. Wartość może wynosić od 10 (pierwsza) do -10 (ostatnia). Wartość domyślna to 0.'
+          default: 0
+          min: -10
+          max: 10

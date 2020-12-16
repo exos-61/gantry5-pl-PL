@@ -1,0 +1,10 @@
+name: Dziedziczenie
+description: Inherited tab
+type: inherited.inheritance
+
+form:
+  fields:
+    _note:
+      type: separator.note
+      class: 'alert alert-success blocksize-note'
+      content: 'Układ szablonu %s został odziedziczony przez szablon/y: %s'

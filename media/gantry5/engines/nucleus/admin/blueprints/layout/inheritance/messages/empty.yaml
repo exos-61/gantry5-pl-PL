@@ -1,0 +1,10 @@
+name: Dziedziczenie
+description: Nothing to inherit tab
+type: empty.inheritance
+
+form:
+  fields:
+    _note:
+      type: separator.note
+      class: 'alert alert-warning blocksize-note'
+      content: 'Ten element nie istnieje i z tego powodu nie można go odziedziczyć.'

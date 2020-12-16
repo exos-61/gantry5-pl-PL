@@ -1,0 +1,34 @@
+name: !Branding
+description: Displays powered by link to Gantry Framework
+type: particle
+icon: fa-trademark
+
+configuration:
+  caching:
+    type: static
+
+form:
+  fields:
+  
+    _note_edu:
+      type: separator.note
+      class: alert alert-success
+      content: <p style="margin:0;"><small><button type="button" class="btn btn-secondary">Moduł-G5 Branding</button> jest zintegrowany z <a href="http://docs.gantry.org/gantry5/particles/mobile-menu" target="_blank"> Gantry 5 <i class="fa fa-external-link"></i></a>.<br />Branding, czyli budowanie świadomości marki polega na kreowaniu i utrzymaniu pozytywnego wizerunku konkretnej marki w umysłach konsumentów. Przy pomocy tej wtyczki przedstaw się.</small></p>
+      
+    enabled:
+      type: input.checkbox
+      label: Włączony
+      description: Globally enable to the particles.
+      default: true
+
+    content:
+      type: textarea.textarea
+      label: Treść
+      description: Utwórz lub zmodyfikuj dane .
+      default: 'Obsługiwane przez <a href="http://www.gantry.org/" title="Gantry Framework" class="g-powered-by">Gantry Framework</a>'
+
+    css.class:
+      type: input.selectize
+      label: Klasy CSS
+      description: Wpisz nazwy klas CSS dostępne w motywie.
+      default: branding

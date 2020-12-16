@@ -1,0 +1,43 @@
+name: !Custom HTML
+description: Wyświetlanie niestandardowego bloku HTML.
+type: particle
+icon: fa-code
+
+configuration:
+  caching:
+    type: config_matches
+    values:
+      twig: '0'
+      filter: '0'
+
+form:
+  fields:
+  
+    _note_edu:
+      type: separator.note
+      class: alert alert-success
+      content: <p style="margin:0;"><small><button type="button" class="btn btn-secondary">Moduł-G5 Custom HTML</button> jest zintegrowany z <a href="http://docs.gantry.org/gantry5/particles/custom-html" target="_blank"> Gantry 5 <i class="fa fa-external-link"></i></a>.<br />Moduł umożliwia wyświetlanie niestandardowego bloku HTML.</small></p>
+      
+    enabled:
+      type: input.checkbox
+      label: Włączony
+      description: Globally enable the particle.
+      default: true
+
+    html:
+      type: textarea.textarea
+      label: Custom HTML
+      description: Wpisz tutaj niestandardowy kod HTML.
+      overridable: false
+
+    twig:
+       type: input.checkbox
+       label: Process Twig
+       description: Włącz przetwarzanie szablonu Twig w treści. Twig będzie przetwarzana przed skrótami.
+       default: '0'
+
+    filter:
+      type: input.checkbox
+      label: Process shortcodes
+      description: Włącz przetwarzanie / filtrowanie krótkich kodów w treści.
+      default: '0'

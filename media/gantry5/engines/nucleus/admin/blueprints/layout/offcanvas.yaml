@@ -1,0 +1,50 @@
+name: Offcanvas
+description: Section outside the viewport.
+type: offcanvas
+
+form:
+  fields:
+  
+    _note_edu:
+      type: separator.note
+      class: alert alert-success
+      content: <div style="margin:0;"><strong>Poradniki</strong><br /><a href="http://docs.gantry.org/gantry5/configure/layout-manager#offcanvas-section" target="_blank"> Gantry5<i class="fa fa-external-link"></i></a><a href="https://www.w3schools.com/howto/howto_js_off-canvas.asp" target="_blank"> Kod<i class="fa fa-external-link"></i></a><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/translate3d" target="_blank"> translate3d<i class="fa fa-external-link"></i></a><a href="https://developer.apple.com/documentation/uikit/touches_presses_and_gestures/handling_uikit_gestures/handling_swipe_gestures" target="_blank"> Swipe Gestures<i class="fa fa-external-link"></i></a><a href="https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_sidenav_push" target="_blank"> Demo<i class="fa fa-external-link"></i></a><p><strong>Opis</strong><br /><small>Kontener sekcji Offcanvas umożliwia wstawianie elementów, które są niewidoczne na stronie dopóki ich nie wywołamy specjalnie do tego celu stworzonym elementem jak np. przycisk, menu itp.</small></p></div>
+      
+    position:
+      type: select.selectize
+      label: Pozycja
+      description: Wybierz pozycję wyświetlania zawartości umieszczonej w sekcji Offcanvas.
+      default: g-offcanvas-left
+      options:
+        g-offcanvas-left: Lewa
+        g-offcanvas-right: Prawa
+
+
+    class:
+      type: input.selectize
+      label: Klasy CSS
+      description: Wprowadź nazwy klas CSS.
+      default:
+
+    extra:
+      type: collection.keyvalue
+      label: Atrybuty Tagu
+      description: Pole umożliwia stosowanie atrybutów tagów HTML dla kontenera sekcji Offcanvas. Można stosować atrybuty stylu, tagi stosowane do efektów JavaScript itp. Dodaj tylko wbudowany kod CSS, tagi < style >< /style > zostaną automatycznie dodane.
+      key_placeholder: 'Key (data-*, style, ...)'
+      value_placeholder: Value
+      exclude: ['id', 'class']
+
+    swipe:
+      type: input.checkbox
+      label: Gesty Swipe
+      description: Włącza lub wyłącza wykrywanie ruchu palcem w poziomie lub w pionie na ekranie, które używa się do otwierania i zamykania.
+      default: 1
+
+    css3animation:
+      type: input.checkbox
+      label: Animacje CSS3
+      description: Animuje offcanvas za pomocą translate3d. Jeśli występują błędy przełącz animację z powrotem na lewą stronę.
+      default: 1
+
+    _inherit:
+      type: gantry.inherit

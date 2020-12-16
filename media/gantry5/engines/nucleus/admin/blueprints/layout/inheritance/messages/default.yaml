@@ -1,0 +1,15 @@
+name: Dziedziczenie
+description: Nothing to inherit tab
+type: empty.inheritance
+
+form:
+  fields:
+  
+    _note:
+      type: separator.note
+      class: 'alert alert-info blocksize-note'
+      content: 'Możesz dziedziczyć sekcje i moduły z Szablonu bazowego.'
+    _note2:
+      type: separator.note
+      class: 'alert alert-success blocksize-note'
+      content: 'Obecnie żaden szablon nie dziedziczy tego elementu.'

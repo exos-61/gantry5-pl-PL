@@ -1,0 +1,19 @@
+name: Blok
+description: Layout block.
+type: block
+
+form:
+  fields:
+  
+    class:
+      type: input.selectize
+      label: Klasy CSS
+      description: Wprowadź nazwy klas CSS.
+
+    extra:
+      type: collection.keyvalue
+      label: Atrybuty Tagu
+      description: Pole umożliwia stosowanie atrybutów tagów HTML dla kontenera sekcji Offcanvas. Można stosować atrybuty stylu, tagi stosowane do efektów JavaScript itp. Dodaj tylko wbudowany kod CSS, tagi < style >< /style > zostaną automatycznie dodane.
+      key_placeholder: 'Key (data-*, style, ...)'
+      value_placeholder: Wartość
+      exclude: ['id', 'class']

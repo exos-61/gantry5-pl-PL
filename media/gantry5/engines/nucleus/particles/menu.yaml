@@ -1,0 +1,82 @@
+name: !Menu
+description: Gantry menu
+type: particle
+icon: fa-bars
+
+configuration:
+  caching:
+    type: menu
+
+form:
+  fields:
+  
+    _note_edu:
+      type: separator.note
+      class: alert alert-success
+      content: <p style="margin:0;"><small><button type="button" class="btn btn-secondary">Moduł-G5 Menu</button> jest zintegrowany z <a href="http://docs.gantry.org/gantry5/particles/menu-control" target="_blank"> Gantry 5 <i class="fa fa-external-link"></i></a>.<br />Moduł-G5 Menu umożliwia wyświetlanie menu CMS-a w szablonach Gantry 5.</small></p>
+
+    enabled:
+      type: input.checkbox
+      label: Włączone
+      description: Globally enable the menu particle.
+      default: true
+
+    _info:
+      type: separator.note
+      class: alert alert-info
+      content: GANTRY5_PARTICLE_MENU_INFO
+
+    menu:
+      type: menu.list
+      label: Menu
+      description: Wybierz menu do użycia w module.
+      default: ''
+      selectize:
+          allowEmptyOption: true
+      options:
+        '': Użyj domyślnego menu
+        '-active-': Użyj aktywnego menu
+
+    base:
+      type: menu.item
+      label: Element podstawowy
+      description: "Wybierz element menu, który będzie zawsze używany jako podstawa wyświetlania menu."
+      default: '/'
+      options:
+        '/': Active
+
+    startLevel:
+      type: input.text
+      label: Poziom początkowy
+      description: Ustaw poziom początkowy menu.
+      default: 1
+
+    maxLevels:
+      type: input.text
+      label: Maksymalne poziomy
+      description: Ustaw maksymalną liczbę poziomów menu do wyświetlenia.
+      default: 0
+
+    renderTitles:
+      type: input.checkbox
+      label: Renderuj tytuły
+      description: Renderuje tytuły/etykietki pozycji menu w celu ułatwienia dostępu.
+      default: 0
+
+    hoverExpand:
+      type: input.checkbox
+      label: Rozwiń po najechaniu kursorem
+      description: 'Umożliwia włączanie/wyłączanie możliwości rozwijania pozycji menu przez najechanie kursorem lub kliknięcie'
+      default: 1
+
+    mobileTarget:
+      type: input.checkbox
+      label: Cel mobilny
+      description: Zaznacz to pole, jeśli chcesz, aby to menu stało się celem menu mobilnego i pojawiło się w Offcanvas
+      default: 0
+
+    forceTarget:
+      type: input.checkbox
+      label: Wymuś atrybut docelowy
+      description: "Dodaje 'target=&quot;_self&quot;' atrybut do wszystkich łączy menu zamiast pomijać wartość domyślną. Dodaje atrybut do wszystkich łączy menu zamiast pomijać wartość domyślną. Naprawiono problem z przypiętymi kartami w przeglądarce Firefox, w których linki zewnętrzne zawsze otwierają się w nowej karcie."
+      default: 0

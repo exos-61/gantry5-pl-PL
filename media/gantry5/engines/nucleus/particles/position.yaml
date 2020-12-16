@@ -1,0 +1,32 @@
+name: !Module Position
+description: Display a module position.
+type: position
+icon: fa-object-group
+hidden: false
+
+form:
+  fields:
+  
+    _note_edu:
+      type: separator.note
+      class: alert alert-success
+      content: <p style="margin:0;"><small><button type="button" class="btn btn-secondary">Pozycja-G5 Module Position</button> jest zintegrowany z <a href="http://docs.gantry.org/gantry5/particles/position" target="_blank"> Gantry 5 <i class="fa fa-external-link"></i></a>.<br />Moduł umożliwia tworzenie pozycji dla modułów CMS-a Joomla</small></p>
+      
+    enabled:
+      type: input.checkbox
+      label: Włączony
+      description: Globally enable module positions.
+      default: true
+
+    key:
+      type: input.text
+      label: Key
+      description: Nazwa pozycji.
+      pattern: '[A-Za-z0-9-]+'
+      overridable: false
+
+    chrome:
+      type: input.text
+      label: Chrome
+      description: Moduł chrome w tej pozycji.
+      placeholder: gantry

@@ -1,0 +1,38 @@
+name: Dziedziczenie
+description: Section inheritance tab
+type: section.inheritance
+
+form:
+  fields:
+  
+    _note_edu:
+      type: separator.note
+      class: alert alert-success
+      content: <div style="margin:0;"><strong>Poradniki:  </strong><a href="http://docs.gantry.org/gantry5/configure/inheritance" target="_blank"> Gantry5<i class="fa fa-external-link"></i></a><a href="http://gantry.org/blog/inheritance-update" target="_blank"> Gantry5<i class="fa fa-external-link"></i></a><a href="http://www.kasai1.com/start-strony-internetowe-lublin-pulawy/blog-strony-internetowe/87-gantry-5-3-strony-internetowe-lublin-nowa-funkcja-inherit-dziedziczenie-cz1.html" target="_blank"> Opis<i class="fa fa-external-link"></i></a><a href="#" target="_blank"> Demo<i class="fa fa-external-link"></i></a><p><strong>Opis</strong><br /><small>Hierarchia dziedziczenia w Gantry 5 rozpoczyna się od najwyższego poziomu, którym jest szablon bazowy. Szablon bazowy jest domyślnym i globalnie konfiguruje szablony potomne.<br />W tej zakładce można skonfigurować sekcję poprzez klonowanie lub dziedziczenie ustawień z dostępnych konturów <u>Outline</u>. Operacja klonowania umożliwia edycję konfiguracji atrybutów, natomiast dziedziczenie pobiera konfigurację z konturu nadrzędnego. </small></p></div>
+      
+    mode:
+      type: input.radios
+      label: Tryb
+      description: 'Wybierz tryb operacji.<br /><code>Klonuj</code> wstawia i umożliwia edycję, natomiast <code>Dziedzicz</code> sprawia, że sekcja jest identyczna jak w nadrzędnym konturze z którego pobraliśmy konfigurację i pobiera z niego wszystkie zmiany. Aby operacja została wykonana , należy w opcji <code>Zastąpić</code> wybrać składniki.'
+      default: inherit
+      options:
+        clone: Klonuj
+        inherit: Dziedzicz
+
+    outline:
+      type: gantry.outlines
+      label: Outline
+      description: Wybierz kontur z którego chcesz skopiować lub dziedziczyć atrybuty sekcji i moduły.
+      selectize:
+        allowEmptyOption: true
+      options:
+        '': Bez dziedziczenia
+
+    include:
+      type: input.multicheckbox
+      label: Zastąpić
+      description: Wybierz które elementy lub atrybuty chcesz wstawić do sekcji. Moduły i ustawienia sekcji zostaną zastąpione.
+      options:
+        attributes: Atrybuty sekcji
+        block: Atrybuty Sekcji
+        children: Moduły w sekcji

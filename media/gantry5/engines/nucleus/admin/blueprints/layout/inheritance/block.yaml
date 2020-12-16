@@ -1,0 +1,73 @@
+name: Blok
+description: Layout block.
+type: block
+
+form:
+  fields:
+  
+    _note_edu:
+      type: separator.note
+      class: alert alert-success
+      content: <div style="margin:0;"><strong>Poradniki:  </strong><a href="http://docs.gantry.org/gantry5/tutorials/using-block-settings" target="_blank"> Gantry5<i class="fa fa-external-link"></i></a><a href="https://getbootstrap.com/docs/4.0/content/code/#code-blocks" target="_blank"> Kod<i class="fa fa-external-link"></i></a><a href="#" target="_blank"> Demo<i class="fa fa-external-link"></i></a><p><strong>Opis</strong><br /><small>Kontenery w kontenerach tworzą tzw. bloki, które mogą być sekcjami, modułami, panelami i cząsteczkami (bloki treści tzw. Particle). Wymienione bloki (kontenery) możemy dostosować do zawartości strony. <br />Bloki sekcji to kontenery samodzielne, lub bloki zawarte w kontenerze z panelami sekcji Prawej, Środkowej i Lewej.</small></p></div>
+      
+    block_container:
+      type: container.set
+      id: g-settings-block-attributes
+
+      fields:
+        id:
+          type: input.text
+          label: CSS ID
+          description: 'Wprowadź identyfikator bloku bez hash(#) (ie. <code>your-id</code>. Następnie możesz odwołać się do elementu za pomocą CSS jako <code>#your-id</code>'
+          default:
+
+        class:
+          type: input.selectize
+          label: Klasy CSS
+          description: Wpisz nazwy klas CSS dostępne w motywie.
+          default:
+
+        variations:
+          type: input.block-variations
+          label: Variations
+          description: Wprowadź dodatkowe klasy z gotowych wariantów w motywie
+          default:
+
+        extra:
+          type: collection.keyvalue
+          label: Atrybuty Tagu
+          description: Pole umożliwia stosowanie atrybutów tagów HTML dla bloku. Można stosować atrybuty stylu, tagi stosowane do efektów JavaScript itp.
+          key_placeholder: 'Key (data-*, style, ...)'
+          value_placeholder: Value
+          exclude: ['id', 'class']
+
+        _inherit:
+          type: gantry.inherit
+
+    size_container:
+      type: container.set
+      id: g-settings-block-size
+
+      fields:
+        fixed:
+          type: input.checkbox
+          label: Stały rozmiar bloku
+          description: Zaznacz opcję jeżeli blok ma mieć stały rozmiar.
+
+        size:
+          type: input.text
+          label: Rozmiar bloku
+          description: 'Rozmiar bloku w procentach (5-100).'
+          class: 'custom-validation-field'
+          formnovalidate: true
+          pattern: '^([5-9]|[1-9][0-9]|8.3|9.1|11.1|12.5|14.3|16.7|33.3|100)$'
+          min: 5
+          max: 100
+          append:
+            type: "text"
+            text: "%"
+
+        _note:
+          type: separator.note
+          class: alert alert-warning center blocksize-note
+          content: '<em>Rozmiar bloku</em> można ustawić tylko <span class="blocksize-range">pomiędzy <strong>#min#</strong>% a <strong>#max#</strong>%</span><span class="blocksize-fixed">to <strong>#max#</strong>%</span>'

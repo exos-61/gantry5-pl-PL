@@ -1,0 +1,62 @@
+name: !JavaScript Frameworks
+description: Loads selected frameworks for the page.
+type: atom
+icon: fa-file-code-o
+
+form:
+  fields:
+  
+    _note_edu:
+      type: separator.note
+      class: alert alert-success
+      content: <p style="margin:0;"><small><button type="button" class="btn btn-secondary">Dodatek-G5 JavaScript Frameworks</button> jest zintegrowany z <a href="http://docs.gantry.org/gantry5/configure/page-settings#javascript-frameworks" target="_blank"> Gantry 5 <i class="fa fa-external-link"></i></a><br />Dodatek umożliwia globalne załadowanie potrzebnych frameworków.</small></p>
+      
+    enabled:
+      type: input.checkbox
+      label: Włączony
+      description: Globally enable Frameworks atom.
+      default: true
+
+    _info:
+      type: separator.note
+      class: alert alert-info
+      content: '<strong> WSKAZÓWKA</strong>: włącz następujące frameworki, jeśli potrzebujesz ich we własnych wtyczkach i modułach lub treści.'
+
+    jquery:
+      type: container.set
+      label: jQuery
+      fields:
+        .enabled:
+          type: enable.enable
+          label: Framework
+          default: 0
+        .ui_core:
+          type: enable.enable
+          label: UI Core
+          default: 0
+        .ui_sortable:
+          type: enable.enable
+          label: UI Sortable
+          default: 0
+
+    bootstrap:
+      type: container.set
+      label: Bootstrap
+      fields:
+        .enabled:
+          type: enable.enable
+          label: Framework
+          default: 0
+
+    mootools:
+      label: Mootools
+      type: container.set
+      fields:
+        .enabled:
+          type: enable.enable
+          label: Framework
+          default: 0
+        .more:
+          type: enable.enable
+          label: Mootools More
+          default: 0

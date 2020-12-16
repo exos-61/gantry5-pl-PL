@@ -1,0 +1,23 @@
+name: !Spacer
+description: Dodaj pustą kolumnę do wiersza.
+type: spacer
+icon: fa-arrows-h
+hidden: false
+
+configuration:
+  caching:
+    type: static
+
+form:
+  fields:
+  
+    enabled:
+      type: input.checkbox
+      label: Włączone
+      description: Globally enable spacer.
+      default: true
+
+    _info:
+      type: separator.note
+      class: alert alert-info
+      content: <p style="margin:0;"><small><button type="button" class="btn btn-secondary">Pozycja-G5 Spacer</button> jest zintegrowany z <a href="http://docs.gantry.org/gantry5/particles/spacer" target="_blank"> Gantry 5 <i class="fa fa-external-link"></i></a>.<br />Moduł dodaje pustą kolumnę do wiersza. Umożliwia pozycjonowanie elementów o mniejszej szerokości od wiersza.</small></p>

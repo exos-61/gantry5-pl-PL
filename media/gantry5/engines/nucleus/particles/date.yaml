@@ -1,0 +1,46 @@
+name: !Date
+description: Display a date.
+type: particle
+icon: fa-calendar
+
+form:
+  fields:
+  
+    _note_edu:
+      type: separator.note
+      class: alert alert-success
+      content: <p style="margin:0;"><small><button type="button" class="btn btn-secondary">Moduł-G5 Data</button> jest zintegrowany z <a href="http://docs.gantry.org/gantry5/particles/mobile-menu" target="_blank"> Gantry 5 <i class="fa fa-external-link"></i></a>.<br />Moduł wstawia datę w dowolnym miejscu strony</small></p>
+      
+    enabled:
+      type: input.checkbox
+      label: Włączony
+      description: Globally enable date particles.
+      default: true
+
+    css.class:
+      type: input.selectize
+      label: Klasy CSS
+      description: Nazwa klasy CSS dla modułu.
+      default: date
+
+    date.formats:
+      type: select.date
+      label: Format
+      description: Wybierz preferowany format daty.
+      default: 'l, F d, Y'
+      placeholder: 'Wybierz...'
+      selectize:
+          allowEmptyOption: true
+      options:
+          'l, F d, Y': Date1
+          'l, d F': Date2
+          'D, d F': Date3
+          'F d': Date4
+          'd F': Date5
+          'd M': Date6
+          'D, M d, Y': Date7
+          'D, M d, y': Date8
+          'l': Date9
+          'l j F Y': Date10
+          'j F Y': Date11
+          'F d, Y': Date12
