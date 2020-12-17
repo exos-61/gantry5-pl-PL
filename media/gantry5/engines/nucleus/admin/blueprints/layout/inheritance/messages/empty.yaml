@@ -4,8 +4,8 @@
 # Note: File modified. Translation added.
 # Uwaga: Plik zmodyfikowany. Dodane tłumaczenie.
 
-name: Dziedziczenie
-description: Zakładka opcji dziedziczenia. Komunikat o brakujących elementach. Stan empty.
+name: Szablony potomne
+description: Komunikat o szablonach potomnych.. Komunikat o brakujących elementach. Stan empty.
 type: empty.inheritance
 
 form:
