@@ -1,3 +1,9 @@
+# Gantry5 v.5.4.36 for Joomla 3.4+
+# media/gantry5/engines/nucleus/admin/blueprints/layout/inheritance/messages/empty.yaml
+# Polish translation by: Zbigniew Sokal
+# Note: File modified. Translation added.
+# Uwaga: Plik zmodyfikowany. Dodane tłumaczenie.
+
 name: Dziedziczenie
 description: Zakładka opcji dziedziczenia. Komunikat o brakujących elementach. Stan empty.
 type: empty.inheritance
@@ -7,4 +13,4 @@ form:
     _note:
       type: separator.note
       class: 'alert alert-warning blocksize-note'
-      content: 'Ten element nie istnieje i z tego powodu nie można go odziedziczyć.'
+      content: 'Ten element nie istnieje i z tego powodu nie można go dziedziczyć.'

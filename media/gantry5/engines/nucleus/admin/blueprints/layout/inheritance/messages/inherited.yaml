@@ -1,3 +1,9 @@
+# Gantry5 v.5.4.36 for Joomla 3.4+
+# media/gantry5/engines/nucleus/admin/blueprints/layout/inheritance/messages/inherited.yaml
+# Polish translation by: Zbigniew Sokal
+# Note: File modified. Translation added.
+# Uwaga: Plik zmodyfikowany. Dodane tłumaczenie.
+
 name: Dziedziczenie
 description: Zakładka opcji dziedziczenia z listą szablonów dziedziczących elementy. Stan Dziedziczenia
 type: inherited.inheritance

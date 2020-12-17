@@ -1,3 +1,9 @@
+# Gantry5 v.5.4.36 for Joomla 3.4+
+# media/gantry5/engines/nucleus/admin/blueprints/layout/inheritance/atom.yaml
+# Polish translation by: Zbigniew Sokal
+# Note: File modified. Translation added.
+# Uwaga: Plik zmodyfikowany. Dodane tłumaczenie.
+
 name: Dziedziczenie
 description: Zakładka opcji dziedziczenia/klonowania właściwości wtyczki-G5 (Atom)
 type: atom.inheritance
@@ -22,7 +28,7 @@ form:
     outline:
       type: gantry.outlines
       label: Outline
-      description: Wybierz szablon Outline z którego chcesz skopiować lub dziedziczyć atrybuty Wtyczki-G5 (Atom).
+      description: 'Wybierz szablon Outline z którego chcesz skopiować lub dziedziczyć atrybuty Wtyczki-G5 (Atom).'
       selectize:
         allowEmptyOption: true
       options:
@@ -33,11 +39,11 @@ form:
       id: g-inherit-atom
       outline_field: outline
       label: Instancje Wtyczki-G5
-      description: Lista dostępnych do klonowania lub dziedziczenia instancji (różne ustawienia) Wtyczki-G5 (Atom) w szablonach motywu.
+      description: 'Lista dostępnych do klonowania lub dziedziczenia instancji (różne ustawienia) Wtyczki-G5 (Atom) w szablonach motywu.'
 
     include:
       type: input.multicheckbox
       label: Ustaw atrybuty
-      description: Atrybuty Wtyczki-G5 zostaną zastąpione wybraną instancją w <code>Instancje Wtyczki-G5</code.
+      description: 'Atrybuty Wtyczki-G5 zostaną zastąpione wybraną instancją w <code>Instancje Wtyczki-G5</code>.'
       options:
         attributes: Atom Attributes
