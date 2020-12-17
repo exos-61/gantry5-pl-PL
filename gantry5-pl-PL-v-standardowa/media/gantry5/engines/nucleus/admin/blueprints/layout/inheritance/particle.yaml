@@ -1,0 +1,50 @@
+# Gantry5 v.5.4.36 for Joomla 3.4+
+# media/gantry5/engines/nucleus/admin/blueprints/layout/inheritance/particle.yaml
+# Polish translation by: Zbigniew Sokal
+# Note: File modified. Translation added.
+# Uwaga: Plik zmodyfikowany. Dodane tłumaczenie.
+
+name: Dziedziczenie
+description: Zakładka opcji dziedziczenia/klonowania właściwości Modułu-G5 (Particle)
+type: particle.inheritance
+
+form:
+  fields:
+
+    _note_edu:
+      type: separator.note
+      class: alert alert-success
+      content: <div style="margin:0;"><strong>Poradniki:</strong><a href="http://docs.gantry.org/gantry5/configure/inheritance" target="_blank"> Gantry5 <i class="fa fa-external-link"></i></a><a href="http://gantry.org/blog/inheritance-update" target="_blank"> Gantry5 <i class="fa fa-external-link"></i></a><a href="http://www.kasai1.com/start-strony-internetowe-lublin-pulawy/blog-strony-internetowe/87-gantry-5-3-strony-internetowe-lublin-nowa-funkcja-inherit-dziedziczenie-cz1.html" target="_blank"> Opis <i class="fa fa-external-link"></i></a><a href="https://www.youtube.com/watch?v=o8pNoJ0jsiA" target="_blank"> Wideo poradnik <i class="fa fa-external-link"></i></a><p><strong>Opis</strong><br /><small>Hierarchia dziedziczenia w Gantry 5 rozpoczyna się od najwyższego poziomu, którym jest szablon bazowy (Base Outline). Szablon bazowy jest domyślny i globalnie konfiguruje szablony potomne.<br />W tej zakładce można skonfigurować Moduł-G5 (Particle) poprzez klonowanie lub dziedziczenie ustawień z dostępnych szablonów nazwanych przez zespół Gantry <a href="http://docs.gantry.org/gantry5/basics/terminology#outline" target="_blank"> <u>Outline</u> <i class="fa fa-external-link"></i></a>. Operacja klonowania umożliwia edycję atrybutów, natomiast dziedziczenie pobiera konfigurację z nadrzędnego szablonu Outline. </small></p></div>
+
+    mode:
+      type: input.radios
+      label: Tryb
+      description: 'Wybierz tryb operacji.<br /><code>Klonuj</code> wstawia i umożliwia edycję, natomiast <code>Dziedzicz</code> sprawia, że Moduł-G5 (Particle) jest identyczny jak w nadrzędnym układzie szablonu (Layout) z którego pobraliśmy konfigurację i pobiera (dziedziczy) z niego wszystkie zmiany. Aby operacja klonowania lub kopiowania  została wykonana , należy w opcji <code>Ustaw atrybuty</code> wybrać składnik.'
+      default: inherit
+      options:
+        clone: Klonuj
+        inherit: Dziedzicz
+
+    outline:
+      type: gantry.outlines
+      label: Outline
+      description: 'Wybierz szablon Outline z którego chcesz skopiować lub dziedziczyć atrybuty Modułu-G5 (Particle).'
+      selectize:
+        allowEmptyOption: true
+      options:
+        '': Bez dziedziczenia
+
+    particle:
+      type: gantry.particles
+      id: g-inherit-particle
+      outline_field: outline
+      label: Instancja Modułów-G5
+      description: 'Lista dostępnych do klonowania lub dziedziczenia instancji (różne ustawienia) Modułów-G5 (Particle) w szablonach motywu.'
+
+    include:
+      type: input.multicheckbox
+      label: Ustaw atrybuty
+      description: Wybierz które atrybuty chcesz wstawić. Ustawienia Modułu-G5 zostaną zastąpione.
+      options:
+        attributes: Atrybuty Modułu-G5
+        block: Atrybuty Bloku

@@ -1,0 +1,71 @@
+name: !Logo/Image
+description: Display a logo or an image.
+type: particle
+icon: fa-file-image-o
+
+configuration:
+  caching:
+    type: static
+
+form:
+  fields:
+  
+    _note_edu:
+      type: separator.note
+      class: alert alert-success
+      content: <p style="margin:0;"><small><button type="button" class="btn btn-secondary">Moduł-G5 Logo/Image</button> jest zintegrowany z <a href="http://docs.gantry.org/gantry5/particles/logo" target="_blank"> Gantry 5 <i class="fa fa-external-link"></i></a>.<br />Moduł umożliwia wstawienie logo strony w postaci grafiki lub tekstu.</small></p>
+      
+    enabled:
+      type: input.checkbox
+      label: Włączone
+      description: Globally enable logo particles.
+      default: true
+
+    url:
+      type: input.text
+      label: Url
+      description: Adres URL obrazu. Pozostaw puste, aby przejść do strony głównej.
+
+    target:
+      type: select.select
+      label: Cel
+      description: Docelowe okno przeglądarki po kliknięciu logo.
+      placeholder: 'Wybierz...'
+      default: _self
+      options:
+          _self: Ta sama ramka (domyslne)
+          _parent: Ramka nadrzedna
+          _blank: Nowe okno lub karta
+
+    image:
+      type: input.imagepicker
+      label: Obraz
+      description: Wybierz pożądany obraz logo.
+
+    height:
+      type: input.text
+      label: Maksymalna wysokość
+      description: Ustaw obraz maks. wysokość w wartościach rem, em, px, ub jednostkach procentowych. Pozostaw puste, aby użyć domyślnej wysokości.
+      pattern: '\d+(\.\d+){0,1}(rem|em|ex|ch|vw|vh|vmin|vmax|%|px|cm|mm|in|pt|pc)'
+
+    link:
+      type: input.checkbox
+      label: Link
+      description: 'Renderuje logo/obraz z linkiem.'
+      default: true
+
+    svg:
+      type: textarea.textarea
+      label: Kod SVG
+      description: Twój kod SVG, który zostanie dodany bezpośrednio do witryny.
+      placeholder: 'Tutaj umiesc kod <svg>.'
+
+    text:
+      type: input.text
+      label: Tekst
+      description: Wpisz tekst opisu logo.
+
+    class:
+      type: input.selectize
+      label: Klasy CSS
+      description: Ustaw określoną klasę CSS dla niestandardowego stylu.

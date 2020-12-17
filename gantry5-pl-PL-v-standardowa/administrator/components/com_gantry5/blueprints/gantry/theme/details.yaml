@@ -1,0 +1,73 @@
+name: Theme Details
+description: Describes theme details
+type: theme
+
+form:
+  fields:
+
+    name:
+      type: input.text
+      label: Nazwa
+
+    version:
+      type: input.text
+      label: Wersja
+      default: "@version@"
+
+    icon:
+      type: input.text
+      label: Ikona
+      default: tint
+
+    date:
+      type: input.text
+      label: Data wydania
+      default: "@versiondate@"
+
+    author.name:
+      type: input.text
+      label: Autor
+
+    author.email:
+      type: input.text
+      label: E-mail autora
+
+    author.link:
+      type: input.text
+      label: Link do autora
+
+    documentation.link:
+      type: input.text
+      label: Link do dokumentacji
+
+    support.link:
+      type: input.text
+      label: Link do pomocy technicznej
+
+    updates.link:
+      type: input.text
+      label: Link do aktualizacji
+
+    copyright:
+      type: input.text
+      label: Copyright
+      default: '(C) 2005 - 2019 RocketTheme, LLC. All rights reserved.'
+
+    license:
+      type: input.text
+      label: Licencja
+      default: 'MIT / GPLv2'
+
+    description:
+      type: input.text
+      label: Opis
+
+    images.thumbnail:
+      type: input.text
+      label: Miniatura
+      default: 'admin/images/preset1.png'
+
+    images.preview:
+      type: input.text
+      label: Podgląd obrazu
+      default: 'admin/images/preset1.png'

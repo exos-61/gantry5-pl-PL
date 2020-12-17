@@ -1,0 +1,50 @@
+name: Atrybuty tagu Body
+description: Settings that can be applied to the page.
+type: global
+
+form:
+  fields:
+  
+    _note_edu:
+      type: separator.note
+      class: alert alert-success
+      content: <div style="margin:0;"><strong>Poradniki:  </strong><a href="http://docs.gantry.org/gantry5/configure/gantry-admin#page-settings" target="_blank"> Gantry5<i class="fa fa-external-link"></i></a><a href="#" target="_blank"> Demo<i class="fa fa-external-link"></i></a><br /><small>Element < body > zawiera całą zawartość, która ma być wyświetlana użytkownikom internetowym podczas odwiedzania Twojej strony, niezależnie od tego, czy chodzi o tekst, obrazy, wideo, gry, odtwarzalne ścieżki dźwiękowe czy cokolwiek innego.</small></div>
+      
+    attribs.id:
+      type: input.text
+      label: Body Id
+      default:
+
+    attribs.class:
+      type: input.selectize
+      label: Klasy Body
+      default: gantry
+
+    attribs.extra:
+      type: collection.keyvalue
+      label: Atrybuty tagu
+      description: Pole umożliwia stosowanie atrybutów tagów HTML dla kontenera Body. Można stosować atrybuty stylu, tagi stosowane do efektów JavaScript itp. Dodaj tylko wbudowany kod CSS, tagi < style >< /style > zostaną automatycznie dodane.
+      key_placeholder: 'Key (data-*, style, ...)'
+      value_placeholder: Wartość
+      exclude: ['id', 'class']
+
+    layout.sections:
+      type: select.selectize
+      label: Layout
+      description: "Wybierz w jakim układzie ma wyświetlać się kontener."
+      default: 0
+      options:
+        0: Pełna szerokość (Zawartość w kontenerze)
+        2: Pełna szerokość (Zawartość w dostępnej przestrzeni)
+        1: Kontener
+        3: Usuń kontener
+
+    body_top:
+      type: textarea.textarea
+      label: 'Za tagiem <body>'
+      description: 'Wszystko w tym polu zostanie dołączone zaraz za tagiem otwierającym <code>< body ></code>.'
+
+    body_bottom:
+      type: textarea.textarea
+      label: 'Przed tagiem </body>'
+      description: 'Wszystko w tym polu zostanie dołączone tuż przed tagiem zamykającym <code>< /body ></code>.'

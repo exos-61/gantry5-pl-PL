@@ -1,0 +1,136 @@
+name: Menu Item
+description: Gantry menu item.
+
+form:
+  fields:
+    items:
+      type: collection.list
+      array: true
+      label: Items
+      key: path
+      value: path
+      ajax: true
+      skip: true
+
+      fields:
+        .path:
+          type: key.key
+          label: Ścieżka
+          skip: true
+
+        .enabled:
+          type: input.checkbox
+          label: Włączone
+          description: Włącza Moduł Elementów Menu.
+          default: true
+
+        .id:
+          type: input.text
+          label: Identyfikator pozycji menu
+          readonly: true
+
+        .type:
+          type: input.text
+          label: Typ pozycji menu
+          default: link
+          disabled: true
+
+        .link:
+          type: input.text
+          label: Link
+          disabled: true
+          
+        .rel:
+          type: input.text
+          label: Link Rel Attribute
+          disabled: true
+
+        .attributes:
+          type: collection.keyvalue
+          label: Atrybuty Tagu
+          description: Dodatkowe atrybuty pozycji menu.
+          key_placeholder: Key (e.g. style, name, ...)
+          value_placeholder: Wartosc
+          exclude: ['class', 'style', 'title']
+
+        .link_attributes:
+          type: collection.keyvalue
+          label: Link Tag Attributes
+          description: Dodatkowe atrybuty tagu Link dla elementu menu.
+          key_placeholder: Key (e.g. style, name, ...)
+          value_placeholder: Wartosc
+          exclude: ['class', 'href', 'title', 'aria-label', 'target']
+
+        .hash:
+          type: input.text
+          label: Dołącz skrót
+          description: "Jeśli chcesz dołączyć skrót na końcu adresu URL (np. #to-bottom)"
+
+        .title:
+          type: input.text
+          label: Tytuł menu
+          required: true
+
+        .target:
+          type: select.selectize
+          label: Link docelowy
+          placeholder: 'Wybierz...'
+          options:
+            _self: Biezace okno lub karta
+            _blank: Nowe okno lub karta
+
+        .dropdown:
+          type: select.selectize
+          label: Styl rozwijany
+          default: ''
+          selectize:
+            allowEmptyOption: true
+          options:
+            '': '- Zastosowanie domyslne -'
+            standard: Prosty
+            fullwidth: Rozszerzony
+
+        .dropdown_dir:
+          type: select.selectize
+          label: Kierunek rozwijania
+          description: Miejsce, w którym powinno się otworzyć menu rozwijane względem pozycji menu
+          default: 'right'
+          options:
+            left: Rozwin w lewo
+            center: Wysrodkowany
+            right: Rozwin w prawo
+
+        .dropdown_hide:
+          type: input.checkbox
+          label: Wyłącz listy rozwijane
+          description: Jeśli zaznaczone, a element ma listy rozwijane, nie będą renderowane.
+          default: ''
+
+        .width:
+          type: input.text
+          label: Szerokość rozwijana
+          description: "Ustaw szerokość list rozwijanych tego elementu nadrzędnego (Rodzica) w jednostkach rem, em, px lub auto."
+          default: "auto"
+          pattern: '((\d+(\.\d+){0,1}(rem|em|px))|auto)'
+
+        .class:
+          type: input.selectize
+          label: Klasy CSS
+          description: Wpisz nazwy klas CSS dostępne w motywie.
+
+        .icon:
+          type: input.icon
+          label: Ikona
+
+        .image:
+          type: input.imagepicker
+          label: Obraz
+
+        .icon_only:
+          type: input.checkbox
+          label: Tylko ikona
+          description: Wyświetlaj tylko ikonę lub obraz. Ukrywa tytuł i podtytuły.
+
+        .subtitle:
+          type: input.text
+          label: Podtytuł

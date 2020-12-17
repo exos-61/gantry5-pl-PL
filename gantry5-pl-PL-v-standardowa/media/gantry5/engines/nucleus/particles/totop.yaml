@@ -1,0 +1,40 @@
+name: !To Top
+description: Przewiń z powrotem na górę.
+type: particle
+icon: fa-chevron-up
+
+configuration:
+  caching:
+    type: static
+
+form:
+  fields:
+  
+    _note_edu:
+      type: separator.note
+      class: alert alert-success
+      content: <p style="margin:0;"><small><button type="button" class="btn btn-secondary">Moduł-G5 To Top</button> jest zintegrowany z <a href="http://docs.gantry.org/gantry5/particles/to-top" target="_blank"> Gantry 5 <i class="fa fa-external-link"></i></a>.<br />Moduł umożliwia przewijanie strony z powrotem na górę.</small></p>
+      
+    enabled:
+      type: checkbox
+      label: Włączony
+      description: Włącza globalnie Moduł-G5 To Top.
+      default: true
+
+    css.class:
+      type: input.selectize
+      label: Klasy CSS
+      description: Wpisz nazwy klas CSS dostępne w motywie.
+      default: totop
+
+    icon:
+      type: input.icon
+      label: Ikona
+      description: Wstaw ikonę czcionki Awesome dla łącza.
+
+    content:
+      type: input.text
+      label: Tekst
+      description: Tekst wyświetlany dla łącza. HTML jest dozwolony.
+      placeholder: Do góry
+

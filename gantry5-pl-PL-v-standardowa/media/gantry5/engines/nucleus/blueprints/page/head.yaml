@@ -1,0 +1,30 @@
+name: Właściwości tagu Head
+description: Settings that can be applied to the page.
+type: global
+
+form:
+  fields:
+  
+    _note_edu:
+      type: separator.note
+      class: alert alert-success
+      content: <div style="margin:0;"><strong>Poradniki:  </strong><a href="http://docs.gantry.org/gantry5/configure/gantry-admin#page-settings" target="_blank"> Gantry5<i class="fa fa-external-link"></i></a><a href="https://pomoc.home.pl/baza-wiedzy/najwazniejsze-znaczniki-meta-i-ich-funkcje-meta-tagi" target="_blank"> Meta Tagi<i class="fa fa-external-link"></i></a><a href="https://www.semtec.pl/protokol-open-graph-dlaczego-warto-umiescic-go-na-stronie/" target="_blank"> Open Graph<i class="fa fa-external-link"></i></a><a href="https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/getting-started" target="_blank"> Tweets with Cards<i class="fa fa-external-link"></i></a><a href="#" target="_blank"> Demo<i class="fa fa-external-link"></i></a><br /><small>Element <b>< head ></b> to tzw. nagłówek strony. Ten element działa jak kontener dla wszystkich elementów, które chcesz umieścić na stronie HTML, ale nie w treści, które wyświetlasz przeglądającym twoją stronę. Obejmuje to takie rzeczy jak {Glossary("keyword", "keywords")}} i opis strony, który ma się pojawiać w wynikach wyszukiwania, styl CSS, stylowanie naszej treści, deklaracje zestawu znaków, użytych skryptow i inne. Wpisy działają tylko na tym szablonie (nie dotyczy szablonu bazowego)</small></div>
+      
+    meta:
+      type: collection.keyvalue
+      label: Metatagi
+      description: Wstaw tagi protokołu OG dla serwisów społecznościowych Np: og: title, og: type, og: image, og: url
+      
+      key_placeholder: 'og:title, og:site_name, twitter:site'
+      value_placeholder: Wartość
+      default:
+
+    head_bottom:
+      type: textarea.textarea
+      label: Dołącz do Head
+      description: Wszystko w tym polu zostanie dołączone do tagu head
+
+    atoms:
+      type: input.hidden
+      override_target: '#atoms .atoms-list + input[type="checkbox"]'
+      array: true

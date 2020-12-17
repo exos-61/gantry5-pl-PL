@@ -1,0 +1,19 @@
+name: !Page Content
+description: Wyświetlanie zawartości na stronie głównej.
+type: system
+icon: fa-file-text-o
+hidden: false
+
+form:
+  fields:
+  
+    enabled:
+      type: input.checkbox
+      label: Włączony
+      description: Globally enable page content.
+      default: true
+
+    _info:
+      type: separator.note
+      class: alert alert-info
+      content: <p style="margin:0;"><small><button type="button" class="btn btn-secondary">Pozycja-G5 Page Content</button> jest zintegrowany z <a href="http://docs.gantry.org/gantry5/particles/page-content" target="_blank"> Gantry 5 <i class="fa fa-external-link"></i></a>.<br />Moduł wyświetla treści na Twojej stronie. Można go wyłączyć na kilku wybranych stronach, takich jak Strona Główna lub strona niestandardowa zbudowana z modułów Particle.</small></p>

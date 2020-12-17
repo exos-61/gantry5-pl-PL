@@ -1,0 +1,24 @@
+name: !System Messages
+description: Wyświetlanie komunikatów systemowych.
+type: system
+icon: fa-exclamation-circle
+hidden: false
+
+form:
+  fields:
+  
+    enabled:
+      type: input.checkbox
+      label: Włączone
+      description: Włącza globalnie wyświetlanie komunikatów. Należy bezwzglednie dołączać moduł do szablonów w celu umożliwienia użytkownikom odczytu alertów..
+      default: true
+
+    _info:
+      type: separator.note
+      class: alert alert-info
+      content: <p style="margin:0;"><small><button type="button" class="btn btn-secondary">Pozycja-G5 System Messages</button> jest zintegrowany z <a href="http://docs.gantry.org/gantry5/particles/system-messages" target="_blank"> Gantry 5 <i class="fa fa-external-link"></i></a>.<br />Wyświetla komunikaty systemowe w Twoim układzie szablonu na określonej pozycji.</samll></p>
+
+    _alert:
+      type: separator.note
+      class: alert alert-warning
+      content: Zawsze dołączaj ten moduł do wszystkich tworzonych układów szablonu. W przeciwnym razie użytkownicy nie zobaczą ważnych komunikatów systemowych, takich jak niepowodzenia logowania.

@@ -1,0 +1,87 @@
+name: !Social
+description: Display social buttons.
+type: particle
+icon: fa-share-alt
+
+configuration:
+  caching:
+    type: static
+
+form:
+  fields:
+  
+    _note_edu:
+      type: separator.note
+      class: alert alert-success
+      content: <p style="margin:0;"><small><button type="button" class="btn btn-secondary">Moduł-G5 Social</button> jest zintegrowany z <a href="http://docs.gantry.org/gantry5/particles/social" target="_blank"> Gantry 5 <i class="fa fa-external-link"></i></a>.<br />Moduł umożliwia umieszczenie ikon społecznościowych.</small></p>
+      
+    enabled:
+      type: input.checkbox
+      label: Włączone
+      description: Globally enable social particles.
+      default: true
+
+    css.class:
+      type: input.selectize
+      label: Klasy CSS
+      description: Nazwa klasy CSS dla modułu.
+      default: social
+
+    title:
+      type: input.text
+      label: Tytuł
+      description: Dostosuj tekst tytułu.
+      placeholder: Wprowadź tytuł
+
+    target:
+      type: select.select
+      label: Cel
+      description: Docelowe okno przeglądarki po kliknięciu elementu.
+      placeholder: 'Wybierz...'
+      default: ''
+      options:
+          '': None
+          _self: Self
+          _parent: Parent
+          _top: Top
+          _blank: Nowe okno
+
+    display:
+      type: input.radios
+      label: Wyświetl
+      description: Jak wyświetlić ikony społecznościowe
+      default: both
+      options:
+        icons_only: Tylko ikony
+        text_only: Tylko tekst
+        both: Obydwa
+
+    items:
+      type: collection.list
+      array: true
+      label: Elementy społeczne
+      description: Utwórz każdy element społecznościowy do wyświetlenia.
+      value: name
+      ajax: true
+
+      fields:
+        .name:
+          type: input.text
+          label: Nazwa
+          skip: true
+
+        .icon:
+          type: input.icon
+          label: Ikona
+
+        .text:
+          type: input.text
+          label: Tekst
+
+        .title:
+          type: input.text
+          label: Tytuł
+
+        .link:
+          type: input.text
+          label: Link

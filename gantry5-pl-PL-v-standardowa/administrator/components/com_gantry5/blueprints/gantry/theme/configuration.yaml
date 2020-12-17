@@ -1,0 +1,78 @@
+name: Theme Details
+description: Describes theme details
+type: theme
+
+form:
+  fields:
+
+    gantry.platform:
+      type: input.text
+      label: Platforma
+
+    gantry.engine:
+      type: input.text
+      label: Silnik
+      default: nucleus
+
+    theme.parent:
+      type: input.text
+      label: Motyw nadrzędny - rodzic
+
+    theme.base:
+      type: input.text
+      label: Motyw podstawowy
+      default: 'gantry-theme://common'
+
+    theme.file:
+      type: input.text
+      label: Moduł ładujący
+      default: 'gantry-theme://include/theme.php'
+
+    theme.class:
+      type: input.text
+      label: Klasa motywu
+      default: '\Gantry\Framework\Theme'
+
+    fonts:
+      type: input.hidden
+      array: true
+
+    css.compiler:
+      type: input.text
+      label: Kompilator CSS
+      default: '\Gantry\Component\Stylesheet\ScssCompiler'
+
+    css.paths:
+      type: input.text
+      label: Ścieżki wyszukiwania CSS
+      array: true
+      default:
+        - 'gantry-theme://scss'
+        - 'gantry-engine://scss'
+
+    css.files:
+      type: input.text
+      label: Pliki CSS
+      array: true
+
+    css.persistent:
+      type: input.text
+      label: Stały CSS
+      array: true
+
+    css.overrides:
+      type: input.text
+      label: Zastąp CSS
+      array: true
+
+    block-variations:
+      type: input.hidden
+      array: true
+
+    section-variations:
+      type: input.hidden
+      array: true  
+
+    dependencies:
+      type: input.hidden
+      array: true

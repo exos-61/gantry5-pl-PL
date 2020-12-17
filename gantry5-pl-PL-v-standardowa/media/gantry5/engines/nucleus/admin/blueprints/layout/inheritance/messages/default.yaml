@@ -1,0 +1,21 @@
+# Gantry5 v.5.4.36 for Joomla 3.4+
+# media/gantry5/engines/nucleus/admin/blueprints/layout/inheritance/messages/default.yaml
+# Polish translation by: Zbigniew Sokal
+# Note: File modified. Translation added.
+# Uwaga: Plik zmodyfikowany. Dodane tłumaczenie.
+
+name: Dziedziczenie
+description: Zakładka opcji dziedziczenia. Brak dziedziczonych sekcji i modułów (Stan domyślny).
+type: empty.inheritance
+
+form:
+  fields:
+
+    _note:
+      type: separator.note
+      class: 'alert alert-info blocksize-note'
+      content: 'Możesz dziedziczyć sekcje i moduły z Szablonu bazowego (Base Outline), który ma skonfigurowany układ szablonu (Layout), Moduły-G5 (Particles), Wtyczki-G5 (Atoms), Pozycje-G5 (Module Position) i Instancje-G5 (Module Instance).'
+    _note2:
+      type: separator.note
+      class: 'alert alert-success blocksize-note'
+      content: 'Obecnie żaden szablon nie dziedziczy tego elementu.'

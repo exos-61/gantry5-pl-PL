@@ -1,0 +1,3 @@
+{% if gantry.debug or not gantry.global.get('production') %}
+<div class="alert alert-error"><strong>Ostrzeżenie: </strong> Typ zawartości {{ segment.type }} {{ segment.options.type }} nie jest obsługiwany.</div>
+{% endif %}

@@ -1,0 +1,53 @@
+name: Sekcja
+description: Layout section.
+type: section
+
+form:
+  fields:
+  
+    _note_edu:
+      type: separator.note
+      class: alert alert-success
+      content: <div style="margin:0;"><strong>Poradniki:  </strong><a href="http://docs.gantry.org/gantry5/tutorials/using-block-settings" target="_blank"> Gantry5<i class="fa fa-external-link"></i></a><a href="https://developer.mozilla.org/pl/docs/Web/HTML/Element/section" target="_blank"> Kod<i class="fa fa-external-link"></i></a><a href="#" target="_blank"> Demo<i class="fa fa-external-link"></i></a><p><strong>Opis</strong><br /><small>Element < section >< /section > tworzy kontener dokumentu, bądź aplikacji. Używany jest do grupowania podobnych tematycznej treści. Bloki sekcji to kontenery samodzielne, lub bloki zawarte w kontenerze z panelami sekcji Prawej, Środkowej i Lewej.</small></p></div>
+      
+    boxed:
+      type: select.selectize
+      label: Układ szablonu
+      description: "Wybierz w jakim układzie ma wyświetlać się kontener. 'Dziedziczenie' odnosi się do ustawień strony."
+      isset: true
+      selectize:
+        allowEmptyOption: true
+      options:
+        '': Dziedziczenie konfiguracji strony
+        0: Pełna szerokość (Zawartość w kontenerze)
+        2: Pełna szerokość (Cała zawartość)
+        1: Kontener
+        3: Usuń kontener
+
+    class:
+      type: input.selectize
+      label: Klasy CSS
+      description: Wprowadź nazwy klas CSS dostępne w motywie.
+      default:
+
+    variations:
+      type: input.section-variations
+      label: Variations
+      description: Wprowadź dodatkowe klasy z gotowych wariantów w motywie.
+      default:
+     
+    _info:
+          type: separator.note
+          class: alert alert-info
+          content: 'Dodaj tylko wbudowany kod CSS, tagi &lt;style&gt;&lt;/style&gt; zostaną automatycznie dodane.'
+
+    extra:
+      type: collection.keyvalue
+      label: Atrybuty Tagu
+      description: Pole umożliwia stosowanie atrybutów tagów HTML dla kontenera sekcji. Można stosować atrybuty stylu, tagi stosowane do efektów JavaScript itp. Dodaj tylko wbudowany kod CSS, tagi < style >< /style > zostaną automatycznie dodane.
+      key_placeholder: 'Key (data-*, style, ...)'
+      value_placeholder: Value
+      exclude: ['id', 'class']
+
+    _inherit:
+      type: gantry.inherit

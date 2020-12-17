@@ -1,0 +1,28 @@
+name: !Mobile Menu
+description: Renders the mobile menu container for the offcanvas section.
+type: particle
+icon: fa-ellipsis-v
+hidden: false
+
+configuration:
+  caching:
+    type: static
+
+form:
+  fields:
+  
+    _note_edu:
+      type: separator.note
+      class: alert alert-success
+      content: <p style="margin:0;"><button type="button" class="btn btn-secondary">Moduł-G5 Menu</button> jest zintegrowany z <a href="http://docs.gantry.org/gantry5/particles/mobile-menu" target="_blank"> Gantry 5 <i class="fa fa-external-link"></i></a>.</p>
+      
+    enabled:
+      type: input.checkbox
+      label: Włączony
+      description: Globally enable spacer.
+      default: true
+
+    _note:
+      type: separator.note
+      class: alert alert-info
+      content: '<p>Ten Moduł jest przeznaczony do umieszczenia w kontenerze na urządzenia mobilne.</p><p>Pamiętaj, że tne Moduł <strong>musi</strong> być unikalny w układzie szablonu i wstawiony do sekcji Offcanvas. Będzie także potrzebne menu, które tworzymy w CMS-ie.</p>'
