@@ -11,11 +11,16 @@ type: empty.inheritance
 form:
   fields:
 
+    _note_edu:
+      type: separator.note
+      class: alert alert-success
+      content: '<div style="margin:0;"><strong>Poradniki:</strong><a href="http://docs.gantry.org/gantry5/configure/inheritance" target="_blank"> Gantry5 <i class="fa fa-external-link"></i></a><a href="http://gantry.org/blog/inheritance-update" target="_blank"> Gantry5 <i class="fa fa-external-link"></i></a><a href="https://www.youtube.com/watch?v=o8pNoJ0jsiA" target="_blank"> Wideo <i class="fa fa-external-link"></i></a><p><strong>Opis technologii</strong><br /><small>Hierarchia dziedziczenia w Gantry 5 rozpoczyna się od najwyższego poziomu, którym jest szablon bazowy (<a href="http://docs.gantry.org/gantry5/basics/introduction#particle-defaults" target="_blank">Base Outline</a>). Szablon bazowy jest domyślny i globalnie konfiguruje szablony potomne.<br /><strong>Opis elementu</strong><br />Zakładka wyświetla informację dla obiektów, które dodaliśmy do szablonu o możliwości tworzenie na ich podstawie obiektów potomnych. Informacja dotyczy elementów wstawionych do szablonu w karcie <a href="http://docs.gantry.org/gantry5/configure/layout-manager" target="_blank">Layout</a> (Układ szablonu) i <a href="http://docs.gantry.org/gantry5/configure/page-settings" target="_blank">Page Settings</a> (Ustawienia strony). Obiekty aktywujące ostrzeżenie to: <a href="http://docs.gantry.org/gantry5/particles/particles#standard-particles" target="_blank"> Particle </a>(Moduły-G5), <a href="http://docs.gantry.org/gantry5/particles/particles#atoms" target="_blank"> Atom </a>(Wtyczki-G5), <a href="http://docs.gantry.org/gantry5/particles/particles#positions" target="_blank"> Module Position </a>(Pozycje-G5), <a href="http://docs.gantry.org/gantry5/particles/module-instance" target="_blank"> Module Instance </a>(Instancje-G5), <a href="http://docs.gantry.org/gantry5/particles/page-content" target="_blank"> Page Content </a>(główny kontener treści), <a href="http://docs.gantry.org/gantry5/particles/system-messages" target="_blank"> System Messages </a>(komunikaty systemowe), Bloki sekcji <a href="http://docs.gantry.org/gantry5/configure/layout-manager#sections" target="_blank"> (Section)</a> oraz <a href="https://developer.mozilla.org/en-US/docs/Glossary/Grid_Container" target="_blank"> (Container)</a> z  <a href="http://docs.gantry.org/gantry5/configure/layout-manager#sidebar-blocks-and-grids" target="_blank"> blokami</a> sekcji Prawej, Środkowej i Lewej</p><code>Tłumaczenie - wersja edukacyjna 1.0.0 <a href="https://ostry-dziadek.xyz/kategorie/panel-hobbystyczny/cms/gantry5-po-polsku" target="_blank"><i class="fa fa-external-link"></i></a></code></div>'
+
     _note:
       type: separator.note
       class: 'alert alert-info blocksize-note'
-      content: 'Możesz dziedziczyć sekcje i moduły z Szablonu bazowego (Base Outline), który ma skonfigurowany układ szablonu (Layout), Moduły-G5 (Particles), Wtyczki-G5 (Atoms), Pozycje-G5 (Module Position) i Instancje-G5 (Module Instance).'
+      content: '<strong>Informacja o możliwości dziedziczenia</strong><br />Możesz dziedziczyć sekcje i moduły z Szablonu bazowego (Base Outline), który ma skonfigurowany układ szablonu (Layout). Zawiera wszystkie elementy niezbędne do prawidłowego wyświetlania strony domyślej, którą możemy modyfikować według uznania.'
     _note2:
       type: separator.note
       class: 'alert alert-success blocksize-note'
-      content: 'Obecnie żaden szablon nie dziedziczy tego elementu.'
+      content: '<strong>Komunikat braku obiektów potomnych</strong><br />Obecnie żaden szablon nie dziedziczy tego elementu.'

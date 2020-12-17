@@ -4,12 +4,12 @@ type: container
 
 form:
   fields:
-  
+
     _note_edu:
       type: separator.note
       class: alert alert-success
-      content: <div style="margin:0;"><strong>Poradniki:  </strong><a href="https://www.joomlashack.com/blog/tutorials/grid-containers-vs-block-containers/" target="_blank"> Kontenery<i class="fa fa-external-link"></i></a><a href="https://getbootstrap.com/docs/4.0/layout/overview/#containers" target="_blank"> Kod<i class="fa fa-external-link"></i></a><a href="https://www.w3schools.com/bootstrap4/tryit.asp?filename=trybs_container_resp" target="_blank"> Demo<i class="fa fa-external-link"></i></a><p><strong>Opis</strong><br /><small>Kontenery są fundamentalnymi blokami naszego layoutu (układu szablonu). Sposób w jaki je zorganizujemy tworzy w Gantry poziomy dziedziczenia właściwości elementów nadrzędnych, lub stają się rodzicami dla własnych bloków co umożliwia tworzenie bardzo rozbudowanych stron. Kontenery w kontenerach tworzą tzw. bloki, które mogą być sekcjami, modułami, panelami i cząsteczkami (bloki treści tzw. Particle). Wymienione bloki (kontenery) możemy dostosować do zawartości strony.</small></p></div>
-     
+      content: <div style="margin:0;"><strong>Poradniki:</strong><a href="https://www.joomlashack.com/blog/tutorials/grid-containers-vs-block-containers/" target="_blank"> Kontenery<i class="fa fa-external-link"></i></a><a href="https://getbootstrap.com/docs/4.0/layout/overview/#containers" target="_blank"> Kod<i class="fa fa-external-link"></i></a><a href="https://www.w3schools.com/bootstrap4/tryit.asp?filename=trybs_container_resp" target="_blank"> Demo<i class="fa fa-external-link"></i></a><p><strong>Opis</strong><br /><small>Kontenery są fundamentalnymi blokami naszego layoutu (układu szablonu). Sposób w jaki je zorganizujemy tworzy w Gantry poziomy dziedziczenia właściwości elementów nadrzędnych, lub stają się rodzicami dla własnych bloków co umożliwia tworzenie bardzo rozbudowanych stron. Kontenery w kontenerach tworzą tzw. bloki, które mogą być sekcjami, modułami, panelami i cząsteczkami (bloki treści tzw. Particle). Wymienione bloki (kontenery) możemy dostosować do zawartości strony.</small></p></div>
+
     boxed:
       type: select.selectize
       label: Layout

@@ -14,8 +14,8 @@ form:
     _note:
       type: separator.note
       class: 'alert alert-info blocksize-note'
-      content: 'Możesz dziedziczyć sekcje i moduły z Szablonu bazowego (Base Outline), który ma skonfigurowany układ szablonu (Layout), Moduły-G5 (Particles), Wtyczki-G5 (Atoms), Pozycje-G5 (Module Position) i Instancje-G5 (Module Instance).'
+      content: '<strong>Informacja o możliwości dziedziczenia</strong><br />Możesz dziedziczyć sekcje i moduły z Szablonu bazowego (Base Outline), który ma skonfigurowany układ szablonu (Layout). Zawiera wszystkie elementy niezbędne do prawidłowego wyświetlania strony domyślej, którą możemy modyfikować według uznania.'
     _note2:
       type: separator.note
       class: 'alert alert-success blocksize-note'
-      content: 'Obecnie żaden szablon nie dziedziczy tego elementu.'
+      content: '<strong>Komunikat braku obiektów potomnych</strong><br />Obecnie żaden szablon nie dziedziczy tego elementu.'

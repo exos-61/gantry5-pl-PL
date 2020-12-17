@@ -5,12 +5,13 @@
 # Uwaga: Plik zmodyfikowany. Dodane tłumaczenie.
 
 name: Szablony potomne
-description: Komunikat o szablonach potomnych.. Komunikat o brakujących elementach. Stan empty.
+description: Komunikat o szablonach potomnych. Komunikat o brakujących elementach. Stan empty.
 type: empty.inheritance
 
 form:
   fields:
+
     _note:
       type: separator.note
       class: 'alert alert-warning blocksize-note'
-      content: 'Ten element nie istnieje i z tego powodu nie można go dziedziczyć.'
+      content: '<strong>Komunikat braku obiektu</strong><br />Ten element nie istnieje i z tego powodu nie można go dziedziczyć.'
